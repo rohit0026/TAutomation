@@ -16,6 +16,7 @@ public class SeleniumTest {
 	public void report() {
 		
 		String path = System.getProperty("user.dir") + "\\reports\\index.html";
+		System.out.println("changes in secound file from GIT");
 		//String path1 =  System.getProperty("user.dir");
 		
 		/*Extent reports code starts
