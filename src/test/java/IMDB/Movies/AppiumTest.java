@@ -21,6 +21,7 @@ public class AppiumTest {
 	public void HybridApp()
 	{
 		System.out.println("Hybrid app from Appium tests Part of Regression");
+		System.out.println("changes from GIT");
 	}
 
 }
