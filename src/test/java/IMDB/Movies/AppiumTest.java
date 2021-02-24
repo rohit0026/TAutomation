@@ -13,7 +13,7 @@ public class AppiumTest {
 	@Test(groups = "Regression")
 	public void NativeApp()
 	{
-		System.out.println("Native2 from american guy app from cloned changes Appium tests Part of Regression");
+		System.out.println("Native2 from American guy app from cloned changes Appium tests Part of Regression");
 		//if(5>4)
 		
 	}
