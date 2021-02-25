@@ -13,15 +13,17 @@ public class AppiumTest {
 	@Test(groups = "Regression")
 	public void NativeApp()
 	{
-		System.out.println("Native2 from American guy app from cloned changes Appium tests Part of Regression");
+
 		System.out.println("Indian team commit");
+
+		System.out.println("25Feb Changes from American guy app from cloned changes Appium tests Part of Regression");
 		//if(5>4)
 		
 	}
 	@Test(groups = "Regression")
 	public void HybridApp()
 	{
-		System.out.println("Hybrid app from Appium tests Part of Regression");
+		System.out.println("Hybrid US TEAM app from Appium tests Part of Regression");
 		System.out.println("changes from GIT");
 	}
 
