@@ -14,6 +14,7 @@ public class AppiumTest {
 	public void NativeApp()
 	{
 		System.out.println("Native2 from American guy app from cloned changes Appium tests Part of Regression");
+		System.out.println("Indian team commit");
 		//if(5>4)
 		
 	}
