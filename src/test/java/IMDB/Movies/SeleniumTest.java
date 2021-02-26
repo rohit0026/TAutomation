@@ -48,6 +48,7 @@ public class SeleniumTest {
 		driver.get("https://google.com");
 		extent.flush();
 		driver.quit();
+		System.out.println("New changes from India Team");
 	}
 	@Test(groups = "SMOKE")
 	public void Test2()
