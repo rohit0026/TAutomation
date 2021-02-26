@@ -15,7 +15,8 @@ public class AppiumTest {
 	{
 
 		System.out.println("25Feb Changes from American guy app from cloned changes Appium tests Part of Regression");
-		System.out.println("Indian team commit");
+		System.out.println("USAIndian team commit");
+		
 
 		//if(5>4)
 		
