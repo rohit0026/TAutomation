@@ -48,7 +48,7 @@ public class SeleniumTest {
 		driver.get("https://google.com");
 		extent.flush();
 		driver.quit();
-		System.out.println("New changes from India Team");
+		System.out.println("New changes from India Team on march 03");
 	}
 	@Test(groups = "SMOKE")
 	public void Test2()
