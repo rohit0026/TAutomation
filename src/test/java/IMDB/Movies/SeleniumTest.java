@@ -16,7 +16,7 @@ public class SeleniumTest {
 	public void report() {
 		
 		String path = System.getProperty("user.dir") + "\\reports\\index.html";
-		System.out.println("changes 1 in secound file from GIT");
+		System.out.println("9March changes US team 1 in secound file from GIT");
 		System.out.println("Indian guy Selenium1 test changes from main workbench");
 		//String path1 =  System.getProperty("user.dir");
 		
