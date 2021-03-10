@@ -66,10 +66,14 @@ public class SeleniumTest {
 		 
 		 */
 		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver =  new ChromeDriver();
-		ChromeOptions co =  new ChromeOptions();
-		co.addArguments("--incognito");
+		ChromeOptions options =  new ChromeOptions();
+		//options.addArguments("--incognito");
+		options.addArguments("start-maximized","incognito");
+		options.addArguments("--user-data-dir=C:\\Users\\Rohit\\AppData\\Local\\Temp\\Chrome");
+		
+		WebDriverManager.chromedriver().version("79.0.3945.117").setup();
+		WebDriver driver =  new ChromeDriver(options);
+		
 		
 		driver.navigate().to("https://google.com");
 		driver.navigate().refresh();
