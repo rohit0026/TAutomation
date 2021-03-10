@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="IMDB.Movies.databaseTest">
+      <class name="IMDB.Movies.SeleniumTest">
         <methods>
-          <include name="Database"/>
+          <include name="report"/>
+          <include name="SeleniumTest102"/>
         </methods>
-      </class> <!-- IMDB.Movies.databaseTest -->
+      </class> <!-- IMDB.Movies.SeleniumTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
