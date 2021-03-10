@@ -73,11 +73,13 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager 
+			<version>4.3.1</version> is having prob with backward compatibility old versions 
+			are not working fine -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>4.3.1</version>
+			<version>3.8.1</version>
 		</dependency>
 
 
