@@ -1,15 +1,22 @@
 package IMDB.Movies;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class SeleniumTest {
 	
+	private Object object;
 	ExtentReports extent;
 	
 	@BeforeTest
@@ -42,10 +49,33 @@ public class SeleniumTest {
 	public void SeleniumTest102()
 	{
 		extent.createTest("SeleniumTest102");
+		/* 
 		System.out.println("selenium test passed fro SMOKE TEST");
 		System.setProperty("webdriver.chrome.driver","./Driver/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://google.com");
+		
+		Browser version updated now Implementing webdriver manager
+		
+		All the files of maven dependencies are locally stored at folder called /m2 in 
+		home directory
+		C:\Users\Rohit\.m2\repository
+		Due to slow internet its not working for thers i  guess 
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver = new FirefoxDriver();
+		WebDriverManager.chromedriver().browserVersion("87.0.4280.88").setup();
+		 for any specific version WebDriverManager.chromedriver().browserVersion("yoyr version").setup();
+		 
+		 */
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver =  new ChromeDriver();
+		ChromeOptions co =  new ChromeOptions();
+		co.addArguments("--incognito");
+		
+		driver.navigate().to("https://google.com");
+		driver.navigate().refresh();
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		
+		//driver.get("https://google.com");
 		extent.flush();
 		driver.quit();
 		System.out.println("New changes from India Team on march 03");
