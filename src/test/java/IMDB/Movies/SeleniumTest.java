@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SeleniumTest {
 	
-	private Object object;
+	
 	ExtentReports extent;
 	
 	@BeforeTest
