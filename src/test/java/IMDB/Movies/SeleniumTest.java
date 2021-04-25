@@ -2,7 +2,10 @@ package IMDB.Movies;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -78,11 +81,15 @@ public class SeleniumTest {
 		driver.navigate().to("https://google.com");
 		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		WebElement serach =  driver.findElement(By.xpath("//input[@class='gLFyf gsfi']"));
+		serach.sendKeys("Happy bithday rohit");
+		serach.sendKeys(Keys.ENTER);
+			
 		
 		//driver.get("https://google.com");
 		extent.flush();
-		driver.quit();
-		System.out.println("New changes from India Team on march 03");
+		//driver.quit();
+		System.out.println("New changes from India Team on april 26");
 	}
 	@Test(groups = "SMOKE")
 	public void Test2()
