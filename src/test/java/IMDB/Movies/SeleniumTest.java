@@ -73,7 +73,7 @@ public class SeleniumTest {
 		//options.addArguments("--incognito");
 		options.addArguments("start-maximized","incognito");
 		options.addArguments("--user-data-dir=C:\\Users\\Rohit\\AppData\\Local\\Temp\\Chrome");
-		
+		System.out.println("new change 16june cloned");
 		WebDriverManager.chromedriver().version("79.0.3945.117").setup();
 		WebDriver driver =  new ChromeDriver(options);
 		
