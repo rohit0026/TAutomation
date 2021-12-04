@@ -89,7 +89,7 @@ public class SeleniumTest {
 		//driver.get("https://google.com");
 		extent.flush();
 		//driver.quit();
-		System.out.println("New changes from India Team on april 26");
+		System.out.println("New 11changes from India Team on april 26");
 	}
 	@Test(groups = "SMOKE")
 	public void Test2()
