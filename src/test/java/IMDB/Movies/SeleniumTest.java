@@ -1,5 +1,6 @@
 package IMDB.Movies;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -29,6 +30,7 @@ public class SeleniumTest {
 		System.out.println("9March changes US team 1 in secound file from GIT");
 		System.out.println("Indian guy Selenium1 test changes from main workbench");
 		//String path1 =  System.getProperty("user.dir");
+		//WebDriver driver = new ChromeDriver();
 		
 		/*Extent reports code starts
 		first used version 3.0 from maven repo but it not had ExtentSparkReports class and getting error 
@@ -71,21 +73,30 @@ public class SeleniumTest {
 		
 		ChromeOptions options =  new ChromeOptions();
 		//options.addArguments("--incognito");
-		options.addArguments("start-maximized","incognito");
+		//options.addArguments("start-maximized","incognito");
 		options.addArguments("--user-data-dir=C:\\Users\\Rohit\\AppData\\Local\\Temp\\Chrome");
+		options.setHeadless(false);
 		System.out.println("new change 16june cloned");
-		WebDriverManager.chromedriver().version("79.0.3945.117").setup();
+		//WebDriverManager.chromedriver().version("79.0.3945.117").setup();
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver =  new ChromeDriver(options);
+		
 		
 		
 		driver.navigate().to("https://google.com");
 		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 		WebElement serach =  driver.findElement(By.xpath("//input[@class='gLFyf gsfi']"));
+		driver.manage().window().maximize();
 		serach.sendKeys("Happy bithday rohit");
 		serach.sendKeys(Keys.ENTER);
-			
+		List<WebElement> l =   driver.findElements(By.tagName("a"));
+		System.out.println("The links are "+ l.size());
 		
+		for(int i=0;i<l.size();i++)
+		{
+			System.out.println("Name of Link# " + i + l.get(i).getText());
+		}
 		//driver.get("https://google.com");
 		extent.flush();
 		//driver.quit();
